@@ -12,7 +12,7 @@ class PaymentController extends Controller
 
     public function createTransaction(Request $request, $id)
     {
-        \Midtrans\Config::$serverKey = 'SB-Mid-server-hN_W5twAUmnUpzJtA0VPfeSy';
+        \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
 // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
 \Midtrans\Config::$isProduction = false;
 // Set sanitization on (default)
